@@ -100,8 +100,8 @@ npm install
   <p>Create a <code>.env</code> file and add the following:</p>
   <pre>
 <code>
-DATABASE_URL=postgresql://myappuser:securepassword@localhost:5432/myappdb
-NEXT_PUBLIC_API_URL=https://lachlan-app.impleko.com
+DATABASE_URL=postgresql://datausername:password@localhost:5432/dbname
+NEXT_PUBLIC_API_URL=my-domain
 </code>
   </pre>
 
@@ -134,7 +134,7 @@ sudo nano /etc/nginx/sites-available/lachlan-app
   <pre>
 <code>
 server {
-    server_name lachlan-app.impleko.com;
+    server_name my-domain;
 
     location / {
         proxy_pass http://127.0.0.1:3000;
